@@ -1,4 +1,4 @@
-(function() {
+  (function() {
   var NYLM, claerResizeScroll, conf, getRandomInt, insertI, lol;
 
   conf = {
@@ -12,8 +12,8 @@
     cursorwidth: "4px",
     cursorborder: "none"
   };
-
-  NYLM = ["Уходи дверь закрой", "У меня теперь другой", "Все для тебя", "Мне не нужен больше твой номер в книжке записной", "Владимирский централ, ветер сука", "Ты ушол, а я текла", "Ты пришол в красный день календаря", "бла бла", ")", "умри", "ой все.", "ой все.", "ой все.", "Ты говоришь ТОЧНЕЕ пишешьСя сам с собой"];
+  // Response
+  NYLM = ["dam sun", "u go gurl"]; // Response
 
   getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
