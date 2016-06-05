@@ -12,6 +12,19 @@
     cursorwidth: "4px",
     cursorborder: "none"
   };
+
+
+
+  //This code covers the on click event
+  var ul = document.getElementsByClassName("list-friends");  // Parent
+
+  ul.addEventListener('click', function(e) {
+    console.log("Hello");
+    if (e.target.tagName === 'LI'){
+        alert(e.target.id);  // Check if the element is a LI
+    }
+  });
+
   // Response
   NYLM = ["Couldn't find anything :P, Try stackoverflow","The pip function might help", "Have you tried the cat function?","Well, I did create Linux didn't I :P"]; // Response
 
@@ -43,7 +56,7 @@
 
   messageAnalyze = function(stringText) {
     stringText = stringText.trim()
-    stringText = stringText.replace(/[?]/g,"")
+    stringText = stringText.replace(/[?!]/g,"")
     var stringTextArray = stringText.split(" ");
     console.log(stringTextArray);
     for (stringValue in stringTextArray){
