@@ -22,15 +22,15 @@
 					<input placeholder="search..." type="search" name="" id="searchSupport">
 					<input type="submit" value="&#xf002;">
 				</form>
-				<menu class="list-friends">
-					<li>
+				<menu class="list-friends" id="flfs">
+					<li class="Linux">
 						<img width="50" height="50" src="img/linux.jpg">
 						<div class="info">
 							<div class="user">linux</div>
 							<div class="status on"> online</div>
 						</div>
 					</li>
-					<li>
+					<li class="Python">
 						<img width="50" height="50" src="img/python.jpg">
 						<div class="info">
 							<div class="user">Python</div>
@@ -75,13 +75,10 @@
     	
 
     	  //This code covers the on click event
-		  var ul = document.getElementById("");  // Parent
+		  var ul = document.getElementById("flfs");  // Parent
 
 		  ul.addEventListener('click', function(e) {
-		    console.log("Hello");
-		    if (e.target.tagName === 'LI'){
-		        alert(e.target.id);  // Check if the element is a LI
-		    }
+		    console.log(e.target.textContent);
 		  });
     </script>
     
