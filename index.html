@@ -92,7 +92,19 @@
 <script src='http://cdnjs.cloudflare.com/ajax/libs/nicescroll/3.5.4/jquery.nicescroll.js'></script>
 
 <script src="js/index.js"></script>
-    
+    <script type="text/javascript">
+    	
+
+    	  //This code covers the on click event
+		  var ul = document.getElementById("");  // Parent
+
+		  ul.addEventListener('click', function(e) {
+		    console.log("Hello");
+		    if (e.target.tagName === 'LI'){
+		        alert(e.target.id);  // Check if the element is a LI
+		    }
+		  });
+    </script>
     
     
   </body>
