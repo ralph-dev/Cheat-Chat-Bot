@@ -33,10 +33,10 @@
     innerText = $.trim($("#texxt").val());
     if (innerText !== "") {
       index = messageAnalyze(innerText);
-      $(".messages").append("<li class=\"i\"><div class=\"head\"><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span><span class=\"name\"> User</span></div><div class=\"message\">" + innerText + "</div></li>");
+      $(".messages").append("<li class=\"i "+ "LinuxC"+"\"><div class=\"head\"><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span><span class=\"name\"> User</span></div><div class=\"message\">" + innerText + "</div></li>");
       claerResizeScroll();
       return otvet = setInterval(function() {
-        $(".messages").append("<li class=\"friend-with-a-SVAGina\"><div class=\"head\"><span class=\"name\">Linux  </span><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span></div><div class=\"message\">" + NYLM[index] + "</div></li>");
+        $(".messages").append("<li class=\"computer "+ "LinuxCU" +"\"><div class=\"head\"><span class=\"name\">Linux  </span><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span></div><div class=\"message\">" + NYLM[index] + "</div></li>");
         claerResizeScroll();
         return clearInterval(otvet);
       }, getRandomInt(2500, 500));
