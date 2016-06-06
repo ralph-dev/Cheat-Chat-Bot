@@ -44,24 +44,45 @@
 		</div>
 		<div class="chat">
 			<div class="top">
-				<div class="avatar">
-					<img width="50" height="50" src="img/linux.jpg">
-				</div>
-				<div class="info">
-					<div class="name">Linux</div>
-					<div class="count">Helsinki, Linus Torvalds</div>
-				</div>
-				<i class="fa fa-star"></i>
-			</div>
-			<ul class="messages">
-				<li class="friend-with-a-SVAGina LinuxC">
-					<div class="head">
-						<span class="time">10:13 AM, Today</span>
-						<span class="name">User</span>
+				<div class="Linux Avatar">
+					<div class="avatar">
+						<img width="50" height="50" src="img/linux.jpg">
 					</div>
-					<div class="message">Hello, Need help with Linux Terminal Commands!?</div>
-				</li>
-			</ul>
+					<div class="info">
+						<div class="name">Linux</div>
+						<div class="count">Helsinki, Linus Torvalds</div>
+					</div>
+					<i class="fa fa-star"></i>
+				</div>
+				<div class="Python Avatar">
+					<div class="avatar">
+						<img width="50" height="50" src="img/python.jpg">
+					</div>
+					<div class="info">
+						<div class="name">Python</div>
+						<div class="count">Guido van Rossum</div>
+					</div>
+					<i class="fa fa-star"></i>
+				</div>
+			</div>
+				<ul class="messages linux">
+					<li class="friend-with-a-SVAGina">
+						<div class="head">
+							<span class="time">10:13 AM, Today</span>
+							<span class="name">User</span>
+						</div>
+						<div class="message">Hello, Need help with Linux Terminal Commands!?</div>
+					</li>
+				</ul>
+				<ul class="messages python">
+					<li class="friend-with-a-SVAGina">
+						<div class="head">
+							<span class="time">10:13 AM, Today</span>
+							<span class="name">User</span>
+						</div>
+						<div class="message">Hello, Need help with Python Terminal Commands!?</div>
+					</li>
+				</ul>
 			<div class="write-form">
 				<textarea placeholder="Type your message" name="e" id="texxt"  rows="2"></textarea>
 				<i class="fa fa-picture-o"></i>
@@ -75,22 +96,41 @@
 <script src="js/index.js"></script>
 <script src="js/jayant.js"></script>
     <script type="text/javascript">
-    	  //This code covers the on click event
-		  var ul = document.getElementById("flfs");  // Parent
 
-		  ul.addEventListener('click', function(e) {
-		    console.log(e.target.textContent);
-		    if (e.target.textContent != "Linux"){
-			    ConversationArray = document.getElementsByClassName('LinuxC');
-			    for (i in ConversationArray){
-			    	ConversationArray[i].style.display = 'none';
-			    }
-			    ConversationArrayUser = document.getElementsByClassName('LinuxCU');
-			    for (i in ConversationArrayUser){
-			    	ConversationArrayUser[i].style.display = 'none';
-			    }
-		    }
-		  });
+
+    // 	  //This code covers the on click event
+		  // var ul = document.getElementById("flfs");  // Parent
+
+		  // ul.addEventListener('click', function(e) {
+		  //   console.log(e.target.textContent);
+		  //   if (e.target.textContent == "Python"){
+		  //   	var ConversationArraytestlinux = document.getElementsByClassName('testlinux');
+		  //   	ConversationArraytestlinux[0].style.display = 'none';
+
+			 //    var ConversationArraytestpython = document.getElementsByClassName('testpython');
+		  //   	ConversationArraytestpython[0].style.display = 'block';
+
+			 //    var ConversationArrayPython = document.getElementsByClassName('python');
+				// ConversationArrayPython[0].style.display = 'block';
+
+			 //    var ConversationArrayLinux = document.getElementsByClassName('linux');
+			 //    ConversationArrayLinux[0].style.display = 'none';
+			    
+		  //   }else if (e.target.textContent == "Linux") {
+			 //    var ConversationArraytestpython = document.getElementsByClassName('testpython');
+		  //   	ConversationArraytestpython[0].style.display = 'none';
+
+		  //   	var ConversationArraytestlinux = document.getElementsByClassName('testlinux');
+		  //   	ConversationArraytestlinux[0].style.display = 'block';
+
+			 //    var ConversationArrayPython = document.getElementsByClassName('python');
+				// ConversationArrayPython[0].style.display = 'none';
+			 //    var ConversationArrayLinux = document.getElementsByClassName('linux');
+			 //    ConversationArrayLinux[0].style.display = 'block';
+			    
+		  //   }
+		  // });
+
     </script>
   </body>
 </html>

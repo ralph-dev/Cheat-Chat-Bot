@@ -15,6 +15,7 @@
 
 
   // Response
+  var switchtwo = true;
   NYLM = ["Couldn't find anything :P, Try stackoverflow","The pip function might help", "Have you tried the cat function?","Well, I did create Linux didn't I :P"]; // Response
   var LOL;
   getRandomInt = function(min, max) {
@@ -28,21 +29,28 @@
   };
 
   // This is where the response is called from User and second one is Linux (InnerText contains the user message)
-  insertI = function() {
-    var innerText, otvet;
-    innerText = $.trim($("#texxt").val());
-    if (innerText !== "") {
+insertI = function() {
+  var innerText, otvet, switchone;
+  innerText = $.trim($("#texxt").val());
+  if (innerText !== "") {
       index = messageAnalyze(innerText);
       console.log( typeof index);
-      $(".messages").append("<li class=\"i "+ "LinuxCU" +"\"><div class=\"head\"><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span><span class=\"name\"> User</span></div><div class=\"message\">" + innerText + "</div></li>");
+
+      if (switchtwo == true){
+        switchone = "linux";
+      }else{
+        switchone = "python";
+      }
+      $("." + switchone).append("<li class=\"i\"><div class=\"head\"><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span><span class=\"name\"> User</span></div><div class=\"message\">" + innerText + "</div></li>");
       claerResizeScroll();
       return otvet = setInterval(function() {
-        $(".messages").append("<li class=\"friend-with-a-SVAGina "+"LinuxC"+"\"><div class=\"head\"><span class=\"name\">Linux  </span><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span></div><div class=\"message\">" + index + "</div></li>");
-        claerResizeScroll();
-        return clearInterval(otvet);
-      }, getRandomInt(2500, 500));
-    }
-  };
+      $("." + switchone).append("<li class=\"friend-with-a-SVAGina\"><div class=\"head\"><span class=\"name\">Linux </span><span class=\"time\">" + (new Date().getHours()) + ":" + (new Date().getMinutes()) + " AM, Today</span></div><div class=\"message\">" + index + "</div></li>");
+      claerResizeScroll();
+      return clearInterval(otvet);
+    }, getRandomInt(2500, 500));
+  }
+};
+     
 
 
 
@@ -104,19 +112,64 @@
     return "Try this <a href=" +LOL+ ">" + "Link" + "</a>";
   };
 
+      $(document).ready(function() {
+          console.log('hrllo');
+          document.getElementsByClassName("Python Avatar")[0].style.display = 'none';
+          document.getElementsByClassName("Python Avatar")[0].style.display = 'none';
+          //hideConversation("python");
+          var ConversationArrayPython = document.getElementsByClassName('python');
+          ConversationArrayPython[0].style.display = 'none';
+          
 
-  $(document).ready(function() {
-    $(".list-friends").niceScroll(conf);
-    $(".messages").niceScroll(lol);
-    $("#texxt").keypress(function(e) {
-      if (e.keyCode === 13) {
-        insertI();
-        return false;
-      }
-    });
-    return $(".send").click(function() {
-      return insertI();
-    });
-  });
+        $(".list-friends").niceScroll(conf);
+        $(".messages").niceScroll(lol);
+        $("#texxt").keypress(function(e) {
+          if (e.keyCode === 13) {
+            insertI();
+            return false;
+          }
+        });
+        return $(".send").click(function() {
+          return insertI();
+        });
+      });
+
+
+        //This code covers the on click event
+      var ul = document.getElementById("flfs");  // Parent
+
+      ul.addEventListener('click', function(e) {
+        console.log(e.target.textContent);
+        if (e.target.textContent == "Python"){
+          switchtwo = false;
+          // var ConversationArraytestlinux = document.getElementsByClassName('testlinux');
+          // ConversationArraytestlinux[0].style.display = 'none';
+
+          // var ConversationArraytestpython = document.getElementsByClassName('testpython');
+          // ConversationArraytestpython[0].style.display = 'block';
+
+          var ConversationArrayPython = document.getElementsByClassName('python');
+        ConversationArrayPython[0].style.display = 'block';
+
+          var ConversationArrayLinux = document.getElementsByClassName('linux');
+          ConversationArrayLinux[0].style.display = 'none';
+          
+        }else if (e.target.textContent == "Linux") {
+          switchtwo = true;
+          // var ConversationArraytestpython = document.getElementsByClassName('testpython');
+          // ConversationArraytestpython[0].style.display = 'none';
+
+          // var ConversationArraytestlinux = document.getElementsByClassName('testlinux');
+          // ConversationArraytestlinux[0].style.display = 'block';
+
+          var ConversationArrayPython = document.getElementsByClassName('python');
+        ConversationArrayPython[0].style.display = 'none';
+          var ConversationArrayLinux = document.getElementsByClassName('linux');
+          ConversationArrayLinux[0].style.display = 'block';
+          
+        }
+      });
 
 }).call(this);
+
+
