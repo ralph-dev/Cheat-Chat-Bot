@@ -16,7 +16,7 @@
 
   // Response
   var switchtwo = true;
-  NYLM = ["Couldn't find anything :P, Try stackoverflow","The pip function might help", "Have you tried the cat function?","Well, I did create Linux didn't I :P"]; // Response
+  NYLM = ["Couldn't find anything :P, Try stackoverflow","The pip function might help", "Have you tried the cat function?","Well, I did create Linux didn't I :P", "It sounds like the replace function, heres the syntax {string}.replace('OLD_VALUE','NEW_VALUE')"]; // Response
   var LOL;
   getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -68,6 +68,8 @@ insertI = function() {
         index = 2;
       }else if (stringTextArray[stringValue] == "thanks"){
         index = 3;
+      }else if (stringTextArray[stringValue] == "replace"){
+        index=4
       }
     }
     if (index == 0) {
