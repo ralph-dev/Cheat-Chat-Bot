@@ -1,5 +1,5 @@
-# Linux-Cheat-Chat-Bot
-A Linux Chat Bot Hosted on Azure
+# Cheat-Chat-Bot
+A Chat Bot like website Hosted on Azure
 <br />
 For a General OverView of what the software does.
 <br />
